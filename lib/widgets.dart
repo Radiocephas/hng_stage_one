@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:webview_flutter/webview_flutter.dart';
 
 //profile card
 class ProfileCard extends StatelessWidget {
@@ -94,6 +93,7 @@ class WelcomeCard extends StatelessWidget {
 
 //profile details
 
+// ignore: must_be_immutable
 class ProfileDetails extends StatelessWidget {
   // const ProfileDetails({super.key});
 
@@ -116,6 +116,8 @@ class ProfileDetails extends StatelessWidget {
         listIcon: Icons.code_off_rounded)
   ];
 
+  ProfileDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -137,6 +139,7 @@ class ProfileDetails extends StatelessWidget {
                   color: Colors.blue.withOpacity(0.1),
                   borderRadius: BorderRadius.all(Radius.circular(10))),
               child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
                   shrinkWrap: true,
                   itemCount: mylist.length,
                   itemBuilder: (context, index) {
