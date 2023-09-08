@@ -6,30 +6,33 @@ class ProfileApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        // heightFactor: 1,
-        child: Container(
-          alignment: Alignment.center,
-          width: 500,
-          child: Padding(
-            padding: const EdgeInsets.all(20.0),
-            child: SingleChildScrollView(
-              child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    //profile
-                    ProfileCard(),
+    return SafeArea(
+      bottom: false,
+      child: Scaffold(
+        body: Center(
+          // heightFactor: 1,
+          child: Container(
+            alignment: Alignment.center,
+            width: 500,
+            child: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: SingleChildScrollView(
+                child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      //profile
+                      ProfileCard(),
 
-                    //welcome card
-                    WelcomeCard(),
+                      //welcome card
+                      WelcomeCard(),
 
-                    //profile details
-                    ProfileDetails(),
+                      //profile details
+                      ProfileDetails(),
 
-                    //github button
-                    GithubButton()
-                  ]),
+                      //github button
+                      GithubButton()
+                    ]),
+              ),
             ),
           ),
         ),
