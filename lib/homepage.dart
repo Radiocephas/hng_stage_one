@@ -15,7 +15,7 @@ class ProfileApp extends StatelessWidget {
             alignment: Alignment.center,
             width: 500,
             child: Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: const EdgeInsets.all(30.0),
               child: SingleChildScrollView(
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,

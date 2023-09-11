@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:webview_flutter/webview_flutter.dart';
 
 //profile card
 class ProfileCard extends StatelessWidget {
@@ -180,7 +181,9 @@ class GithubButton extends StatelessWidget {
           elevation: 0,
           padding: EdgeInsets.all(20),
           color: Colors.blue[900],
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(context).pushNamed('/webViewContainer');
+          },
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
